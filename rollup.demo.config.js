@@ -3,9 +3,11 @@ import nodeResolve from "rollup-plugin-node-resolve"
 import commonJS from "rollup-plugin-commonjs"
 
 export default {
-  entry: "demo.js",
-  dest: "demo_bundle.js",
-  format: "iife",
+  input: "demo.js",
+  output: {
+    file: "demo_bundle.js",
+    format: 'iife'
+  },
   plugins: [
     buble({
       exclude: "node_modules/**",
